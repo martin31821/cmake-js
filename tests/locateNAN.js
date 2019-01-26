@@ -3,7 +3,7 @@
 
 let Bluebird = require("bluebird");
 let async = Bluebird.coroutine;
-let locateNAN = require("../../").locateNAN;
+let locateNAN = require("../").locateNAN;
 let path = require("path");
 let assert = require("assert");
 
@@ -19,7 +19,7 @@ fixtures/project
 */
 
 describe("locateNAN", function () {
-    const PROJECT_DIR = path.resolve(__dirname, "..", "fixtures", "project");
+    const PROJECT_DIR = path.resolve(__dirname, "fixtures", "project");
     const NAN_DIR = path.join(PROJECT_DIR, "node_modules", "nan");
 
     it("should locate NAN from dependency", function () {
